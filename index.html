@@ -1,0 +1,21 @@
+
+<head>
+	<meta charset="utf8">
+</head>
+
+<body>
+
+	<div id="app1">
+		<p>{{message}}</p>
+	</div>
+
+	<script src="https://unpkg.com/moonjs/dist/moon.js"></script>
+	<script>
+		const app1 = new Moon({
+			el: "#app1",
+			data: {
+				message: "Hello world"
+			}
+		});
+	</script>
+</body>
