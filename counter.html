@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Counter - Moon Playground</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+
+		<div id="app1">
+			<p>Count: {{count}}</p>
+			<button m-on:click="increment">Add</button>
+			<button m-on:click="decrement">Subtract</button>
+		</div>
+
+		<script src="https://unpkg.com/moonjs/dist/moon.js"></script>
+		<script>
+			const app1 = new Moon({
+				el: "#app1",
+				data: {
+					count: 0,
+				},
+				methods: {
+					increment: function() {
+						this.set('count', 1 + this.get('count'));
+					},
+					decrement: function() {
+						this.set('count', -1 + this.get('count'))
+					},
+				}
+			});
+		</script>
+	</body>
+</html>
